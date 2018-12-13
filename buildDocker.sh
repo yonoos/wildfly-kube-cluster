@@ -1,0 +1,1 @@
+docker build --rm -f Dockerfile -t yonoos/wildfly-kube-cluster:latest .
