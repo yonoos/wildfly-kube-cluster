@@ -4,6 +4,8 @@ LABEL MAINTAINER Younes Chandarli
 
 USER root
 
+RUN /opt/jboss/wildfly/bin/add-user.sh admin admin#admin --silent
+
 COPY docker-entrypoint.sh $JBOSS_HOME/docker-entrypoint.sh
 RUN chown jboss $JBOSS_HOME/docker-entrypoint.sh && \
  	chmod a+x $JBOSS_HOME/docker-entrypoint.sh
